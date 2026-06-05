@@ -1589,11 +1589,13 @@ def main():
         
         # Final tips
         print_header("还没装好？")
-        print(f"  交互模式（选择菜单）:\n")
-        print(f"    {LIGHT_GREEN}curl -fsSL https://zhenyuonline.cn/agent-installer.py | python3{RESET}\n")
-        print(f"  一键模式（无需交互 — 自动安装指定组件）:\n")
-        print(f"    {LIGHT_GREEN}AGENTS_TO_INSTALL=aider,hermes-agent curl -fsSL https://zhenyuonline.cn/agent-installer.py | python3{RESET}\n")
-        print(f"  可选值: hermes, openclaw, aider, codex, claude-code, cline, all\n")
+        print(f"  macOS / Linux（推荐）:\\n")
+        print(f"    {LIGHT_GREEN}curl -fsSL https://zhenyuonline.cn/agent-installer.py | python3{RESET}\\n")
+        print(f"  Windows / 通用（无需 curl，纯 Python）:\\n")
+        print(f"    {LIGHT_GREEN}python -c \"import urllib.request as u; exec(u.urlopen('https://zhenyuonline.cn/agent-installer.py').read())\"{RESET}\\n")
+        print(f"  一键静默模式:\\n")
+        print(f"    {LIGHT_GREEN}AGENTS_TO_INSTALL=aider,hermes-agent curl -fsSL https://zhenyuonline.cn/agent-installer.py | python3{RESET}\\n")
+        print(f"  可选值: hermes, openclaw, aider, codex, claude-code, cline, all\\n")
         print()
         
     except KeyboardInterrupt:
